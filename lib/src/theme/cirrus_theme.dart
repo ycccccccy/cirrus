@@ -7,7 +7,7 @@ import 'package:flutter/material.dart';
 class CirrusTheme {
   // 基础颜色定义
   static const Color primaryBlue = Color(0xFF007AFF);
-  static const Color background = Color(0xFFF5F7FA);
+
   static const Color cardColor = Colors.white;
   static const Color primaryText = Color(0xFF212121);
   static const Color secondaryText = Color(0xFF757575);
@@ -26,15 +26,13 @@ class CirrusTheme {
   static ThemeData _buildLightTheme() {
     return ThemeData(
       useMaterial3: true,
-      scaffoldBackgroundColor: background,
+      scaffoldBackgroundColor: const Color(0xFFF5F7FA),
       primaryColor: primaryBlue,
       splashFactory: InkSparkle.splashFactory,
       colorScheme: const ColorScheme.light(
         primary: primaryBlue,
-        background: background,
         surface: cardColor,
         onPrimary: Colors.white,
-        onBackground: primaryText,
         onSurface: primaryText,
       ),
       cardTheme: CardThemeData(
@@ -58,7 +56,7 @@ class CirrusTheme {
         ),
       ),
       appBarTheme: const AppBarTheme(
-        backgroundColor: background,
+        backgroundColor: Color(0xFFF5F7FA),
         foregroundColor: primaryText,
         elevation: 0,
         scrolledUnderElevation: 0,
@@ -185,7 +183,7 @@ class CirrusTheme {
         ),
       ),
       popupMenuTheme: PopupMenuThemeData(
-        color: background,
+        color: const Color(0xFFF5F7FA),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(12.0),
         ),
@@ -193,7 +191,7 @@ class CirrusTheme {
         textStyle: const TextStyle(color: primaryText, fontSize: 16),
       ),
       bottomNavigationBarTheme: BottomNavigationBarThemeData(
-        backgroundColor: background,
+        backgroundColor: const Color(0xFFF5F7FA),
         selectedItemColor: primaryBlue,
         unselectedItemColor: secondaryText,
         showSelectedLabels: true,
@@ -261,14 +259,11 @@ class CirrusTheme {
       splashFactory: InkSparkle.splashFactory,
       colorScheme: const ColorScheme.dark(
         primary: primaryBlue,
-        secondary: primaryBlue,
         surface: darkSurface,
-        background: darkBackground,
-        error: Color(0xFFCF6679),
         onPrimary: Colors.white,
-        onSecondary: Colors.white,
         onSurface: darkPrimaryText,
-        onBackground: darkPrimaryText,
+        secondary: primaryBlue,
+        error: Color(0xFFCF6679),
         onError: Colors.black,
         brightness: Brightness.dark,
       ),
