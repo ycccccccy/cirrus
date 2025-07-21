@@ -1,7 +1,7 @@
 # Cirrus UI System
 
 [![Pub Version](https://img.shields.io/pub/v/cirrus?style=flat-square)](https://pub.dev/packages/cirrus)
-[![License](https://img.shields.io/github/license/your-username/cirrus?style=flat-square)](https://github.com/your-username/cirrus/blob/main/LICENSE)
+[![License](https://img.shields.io/github/license/ycccccccy/cirrus?style=flat-square)](https://github.com/ycccccccy/cirrus/blob/main/LICENSE)
 
 ---
 
