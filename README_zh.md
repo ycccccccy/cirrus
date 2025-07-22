@@ -7,7 +7,7 @@
 
 [**English**](./README.md) | **中文**
 
-Cirrus 是一套企业级的 Flutter UI 系统，其目标是成为标准 Material Design 库的强大替代品。我们以坚实的 Material 3 (M3) 为基础，但远不止于此——我们对其进行了大规模的重新设计、功能增强和组件扩展，旨在提供一套独特、自成体系且高度统一的设计语言，其灵感源于 EAuxiliary 应用的优雅风格。
+Cirrus 是一套企业级的 Flutter UI 系统，其目标是成为标准 Material Design 库的强大替代品。我们以坚实的 Material 3 (M3) 为基础，但远不止于此——我们对其进行了大规模的重新设计、功能增强和组件扩展，旨在提供一套独特、自成体系且高度统一的设计语言。
 
 我们的愿景是提供一个覆盖开发者所有需求的完整工具箱，带来开箱即用的卓越美学和更精致的开发体验。
 
@@ -17,6 +17,20 @@ Cirrus 是一套企业级的 Flutter UI 系统，其目标是成为标准 Materi
 - **设计驱动**: 每个组件都经过精心设计，注重细节、动画和交互，以实现优雅、现代的视觉效果。
 - **开发者优先**: 提供简洁、直观且类型安全的 API，让构建复杂界面变得简单而愉悦。
 - **开箱即用**: 内置统一的 `CirrusTheme`，默认启用 M3，无需任何额外配置即可获得最佳实践。
+
+## 🎨 组件展示
+
+以下是 Cirrus 中一些核心组件的展示。
+
+| 组件                         | 预览                                          |
+| :--------------------------- | :-------------------------------------------- | --- |
+| **按钮 (Buttons)**           | ![Buttons](assets/images/buttons.png)         |
+| **卡片 (Cards)**             | ![Cards](assets/images/cards.png)             |
+| **对话框 (Dialogs)**         | ![Dialogs](assets/images/dialogs.png)         |     |
+| **文本输入框 (Text Fields)** | ![Text Fields](assets/images/text_fields.png) |
+| **标签页 (TabBar)**          | ![TabBar](assets/images/tabbar.png)           |
+
+_注意：以上图片均为占位符，请您替换为真实的组件截图。_
 
 ## 🚀 快速上手
 

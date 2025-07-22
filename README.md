@@ -7,7 +7,7 @@
 
 **English** | [**中文**](./README_zh.md)
 
-Cirrus is an enterprise-grade Flutter UI system designed to be a powerful alternative to the standard Material Design library. While built upon the solid foundation of Material 3, Cirrus extensively redesigns, enhances, and expands the component suite to deliver a unique, highly opinionated, and cohesive design language inspired by the elegance of the EAuxiliary application.
+Cirrus is an enterprise-grade Flutter UI system designed to be a powerful alternative to the standard Material Design library. While built upon the solid foundation of Material 3, Cirrus extensively redesigns, enhances, and expands the component suite to deliver a unique, highly opinionated.
 
 Our goal is to provide a complete toolkit that covers every component a developer might need, offering superior aesthetics and a more refined developer experience out of the box.
 
@@ -17,6 +17,20 @@ Our goal is to provide a complete toolkit that covers every component a develope
 - **Design-Driven**: Every component is meticulously crafted with attention to detail, animation, and interaction to achieve an elegant and modern look.
 - **Developer-First**: A clean, intuitive, and type-safe API that makes building complex UIs a delightful experience.
 - **Out-of-the-Box**: Ships with a unified `CirrusTheme` and enables Material 3 by default, providing best practices with zero configuration.
+
+## 🎨 Component Showcase
+
+Here are some of the key components available in Cirrus.
+
+| Component       | Preview                                       |
+| :-------------- | :-------------------------------------------- |
+| **Buttons**     | ![Buttons](assets/images/buttons.png)         |
+| **Cards**       | ![Cards](assets/images/cards.png)             |
+| **Dialogs**     | ![Dialogs](assets/images/dialogs.png)         |
+| **Text Fields** | ![Text Fields](assets/images/text_fields.png) |
+| **TabBar**      | ![Navigation](assets/images/TabBar.png)       |
+
+_Note: The images above are placeholders. Please replace them with actual screenshots of your components._
 
 ## 🚀 Getting Started
 

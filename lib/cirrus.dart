@@ -29,3 +29,8 @@ export 'src/widgets/cirrus_search_bar.dart';
 export 'src/widgets/cirrus_date_picker.dart';
 export 'src/widgets/cirrus_time_picker.dart';
 export 'src/widgets/cirrus_dropdown_button.dart';
+export 'src/widgets/cirrus_banner.dart';
+export 'src/widgets/cirrus_segmented_control.dart';
+export 'src/widgets/cirrus_bottom_sheet.dart';
+export 'src/widgets/cirrus_navigation_rail.dart';
+export 'src/widgets/animated_list_fade_in.dart';

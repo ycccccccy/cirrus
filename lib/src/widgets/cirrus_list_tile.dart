@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 ///
 /// 它为标题、副标题和尾部组件提供了一个简洁的布局。
 class CirrusListTile extends StatelessWidget {
+  /// 一个可选的组件，显示在标题之前。
+  final Widget? leading;
   /// 列表项的主要内容，通常是一个 [Text] 组件。
   final Widget title;
 
@@ -23,6 +25,7 @@ class CirrusListTile extends StatelessWidget {
     this.subtitle,
     this.trailing,
     this.onTap,
+    this.leading,
   });
 
   @override
@@ -30,7 +33,8 @@ class CirrusListTile extends StatelessWidget {
     final theme = Theme.of(context);
     final listTileTheme = theme.listTileTheme;
 
-    return ListTile(
+        return ListTile(
+      leading: leading,
       title: title,
       subtitle: subtitle,
       trailing: trailing,

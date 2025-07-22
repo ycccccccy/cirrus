@@ -1,5 +1,6 @@
 import 'package:cirrus/cirrus.dart';
 import 'package:flutter/material.dart';
+import 'package:cirrus_example/new_components_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -82,6 +83,23 @@ class _HomePageState extends State<HomePage>
       body: ListView(
         padding: const EdgeInsets.all(16.0),
         children: [
+          _buildSectionTitle('新组件展示'),
+          CirrusCard(
+            child: CirrusListTile(
+              title: const Text('查看新组件'),
+              subtitle: const Text('横幅、分段控件、底部动作条、导航栏'),
+              trailing: const Icon(Icons.chevron_right),
+              onTap: () {
+                Navigator.of(context).push(MaterialPageRoute(
+                  builder: (context) => NewComponentsPage(
+                    isDarkMode: _isDarkMode,
+                    onThemeChanged: widget.onThemeChanged,
+                  ),
+                ));
+              },
+            ),
+          ),
+          const SizedBox(height: 24),
           _buildSectionTitle('卡片 (CirrusCard)'),
           const CirrusCard(
             child: Padding(
