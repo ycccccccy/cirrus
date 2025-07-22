@@ -26,10 +26,10 @@ class CirrusExpansionTile extends StatelessWidget {
     // 样式会从 ThemeData.expansionTileTheme 中获取。
     return ExpansionTile(
       title: title,
-      children: children,
       initiallyExpanded: initiallyExpanded,
       leading: leading,
       trailing: showTrailing ? null : const SizedBox.shrink(),
+      children: children,
     );
   }
 }

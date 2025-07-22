@@ -37,7 +37,7 @@ class CirrusCircularProgressBar extends StatelessWidget {
           ),
         ),
         progressColor: progressColor,
-        backgroundColor: progressColor.withOpacity(0.2),
+        backgroundColor: progressColor.withAlpha(51),
         circularStrokeCap: CircularStrokeCap.round,
         animation: showAnimation,
         animationDuration: 1000,

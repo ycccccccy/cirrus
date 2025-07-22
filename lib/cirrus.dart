@@ -1,5 +1,3 @@
-library cirrus;
-
 export 'src/widgets/cirrus_card.dart';
 export 'src/widgets/cirrus_button.dart';
 export 'src/widgets/cirrus_list_tile.dart';

@@ -41,7 +41,7 @@ class CirrusTheme {
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(16.0),
         ),
-        shadowColor: Colors.black.withOpacity(0.05),
+        shadowColor: Colors.black.withAlpha(13),
       ),
       elevatedButtonTheme: ElevatedButtonThemeData(
         style: ElevatedButton.styleFrom(
@@ -60,7 +60,7 @@ class CirrusTheme {
         foregroundColor: primaryText,
         elevation: 0,
         scrolledUnderElevation: 0,
-        titleTextStyle: const TextStyle(color: primaryText, fontSize: 20, fontWeight: FontWeight.w500),
+        titleTextStyle: TextStyle(color: primaryText, fontSize: 20, fontWeight: FontWeight.w500),
       ),
       inputDecorationTheme: InputDecorationTheme(
         filled: true,
@@ -95,35 +95,35 @@ class CirrusTheme {
         contentTextStyle: const TextStyle(color: secondaryText, fontSize: 16),
       ),
       switchTheme: SwitchThemeData(
-        thumbColor: MaterialStateProperty.all(Colors.white),
-        trackColor: MaterialStateProperty.resolveWith((states) {
-          if (states.contains(MaterialState.selected)) {
+        thumbColor: WidgetStateProperty.all(Colors.white),
+        trackColor: WidgetStateProperty.resolveWith((states) {
+          if (states.contains(WidgetState.selected)) {
             return primaryBlue;
           }
           return Colors.grey.shade300;
         }),
-        trackOutlineColor: MaterialStateProperty.all(Colors.transparent),
-        overlayColor: MaterialStateProperty.all(primaryBlue.withOpacity(0.1)),
+        trackOutlineColor: WidgetStateProperty.all(Colors.transparent),
+        overlayColor: WidgetStateProperty.all(primaryBlue.withAlpha(26)),
       ),
       tabBarTheme: TabBarThemeData(
         indicatorSize: TabBarIndicatorSize.tab,
         indicator: BoxDecoration(
-          color: primaryBlue.withOpacity(0.1),
+          color: primaryBlue.withAlpha(26),
           borderRadius: BorderRadius.circular(8.0),
         ),
         labelColor: primaryBlue,
         unselectedLabelColor: secondaryText,
         splashFactory: NoSplash.splashFactory,
-        overlayColor: MaterialStateProperty.all(Colors.transparent),
+        overlayColor: WidgetStateProperty.all(Colors.transparent),
         dividerColor: Colors.transparent,
       ),
-      progressIndicatorTheme: const ProgressIndicatorThemeData(
+      progressIndicatorTheme: ProgressIndicatorThemeData(
         color: primaryBlue,
-        linearTrackColor: Color(0xFFE0E0E0),
+        linearTrackColor: const Color(0xFFEEEEEE),
         linearMinHeight: 8,
       ),
       chipTheme: ChipThemeData(
-        backgroundColor: Colors.grey.shade200, // 更浅的背景色
+        backgroundColor: Colors.grey.shade200,
         disabledColor: Colors.grey.shade300,
         selectedColor: primaryBlue,
         secondarySelectedColor: primaryBlue,
@@ -131,16 +131,16 @@ class CirrusTheme {
         labelStyle: const TextStyle(color: primaryText, height: 1.2),
         secondaryLabelStyle: const TextStyle(color: Colors.white, height: 1.2),
         brightness: Brightness.light,
-        shape: const StadiumBorder(), // 使用 StadiumBorder 来获取圆角
-        side: BorderSide.none, // 明确移除边框
+        shape: const StadiumBorder(),
+        side: BorderSide.none,
         checkmarkColor: Colors.white,
       ),
       sliderTheme: SliderThemeData(
         activeTrackColor: primaryBlue,
-        inactiveTrackColor: primaryBlue.withOpacity(0.3),
+        inactiveTrackColor: primaryBlue.withAlpha(77),
         thumbColor: primaryBlue,
-        overlayColor: primaryBlue.withOpacity(0.1),
-        trackHeight: 6.0, // 轨道变细
+        overlayColor: primaryBlue.withAlpha(26),
+        trackHeight: 6.0,
         thumbShape: const RoundSliderThumbShape(enabledThumbRadius: 8.0),
         trackShape: const RoundedRectSliderTrackShape(),
         valueIndicatorShape: const PaddleSliderValueIndicatorShape(),
@@ -150,7 +150,7 @@ class CirrusTheme {
         padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
         textStyle: const TextStyle(color: Colors.white, fontSize: 14),
         decoration: BoxDecoration(
-          color: primaryBlue.withOpacity(0.9),
+          color: primaryBlue.withAlpha(230),
           borderRadius: BorderRadius.circular(8.0),
         ),
       ),
@@ -161,7 +161,7 @@ class CirrusTheme {
         behavior: SnackBarBehavior.floating,
       ),
       badgeTheme: const BadgeThemeData(
-        backgroundColor: Colors.red, // 使用醒目的红色
+        backgroundColor: Colors.red,
         textColor: Colors.white,
         padding: EdgeInsets.symmetric(horizontal: 6),
       ),
@@ -209,18 +209,18 @@ class CirrusTheme {
         shape: const CircleBorder(),
       ),
       checkboxTheme: CheckboxThemeData(
-        fillColor: MaterialStateProperty.resolveWith<Color>((states) {
-          if (states.contains(MaterialState.selected)) {
+        fillColor: WidgetStateProperty.resolveWith<Color>((states) {
+          if (states.contains(WidgetState.selected)) {
             return primaryBlue;
           }
           return Colors.transparent;
         }),
-        checkColor: MaterialStateProperty.all(Colors.white),
+        checkColor: WidgetStateProperty.all(Colors.white),
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(4)),
       ),
       radioTheme: RadioThemeData(
-        fillColor: MaterialStateProperty.resolveWith<Color>((states) {
-          if (states.contains(MaterialState.selected)) {
+        fillColor: WidgetStateProperty.resolveWith<Color>((states) {
+          if (states.contains(WidgetState.selected)) {
             return primaryBlue;
           }
           return secondaryText;
@@ -228,8 +228,8 @@ class CirrusTheme {
       ),
       iconButtonTheme: IconButtonThemeData(
         style: ButtonStyle(
-          foregroundColor: MaterialStateProperty.all(primaryBlue),
-          overlayColor: MaterialStateProperty.all(primaryBlue.withOpacity(0.1)),
+          foregroundColor: WidgetStateProperty.all(primaryBlue),
+          overlayColor: WidgetStateProperty.all(primaryBlue.withAlpha(26)),
         ),
       ),
       listTileTheme: ListTileThemeData(
@@ -246,10 +246,10 @@ class CirrusTheme {
 
   /// 构建深色主题
   static ThemeData _buildDarkTheme() {
-    const darkBackground = Color(0xFF121212);
-    const darkSurface = Color(0xFF1E1E1E);
-    const darkPrimaryText = Color(0xFFE1E1E1);
-    const darkSecondaryText = Color(0xFFB3B3B3);
+    const Color darkBackground = Color(0xFF121212);
+    const Color darkSurface = Color(0xFF1E1E1E);
+    const Color darkPrimaryText = Color(0xFFE0E0E0);
+    const Color darkSecondaryText = Color(0xFFBDBDBD);
 
     return ThemeData(
       useMaterial3: true,
@@ -284,7 +284,7 @@ class CirrusTheme {
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(16.0),
         ),
-        shadowColor: Colors.black.withOpacity(0.1),
+        shadowColor: Colors.black.withAlpha(51),
       ),
       elevatedButtonTheme: ElevatedButtonThemeData(
         style: ElevatedButton.styleFrom(
@@ -328,38 +328,39 @@ class CirrusTheme {
         hintStyle: const TextStyle(color: darkSecondaryText),
       ),
       switchTheme: SwitchThemeData(
-        thumbColor: MaterialStateProperty.all(darkSurface),
-        trackColor: MaterialStateProperty.resolveWith((states) {
-          if (states.contains(MaterialState.selected)) {
+        thumbColor: WidgetStateProperty.all(darkSurface),
+        trackColor: WidgetStateProperty.resolveWith((states) {
+          if (states.contains(WidgetState.selected)) {
             return primaryBlue;
           }
           return Colors.grey.shade700;
         }),
-        trackOutlineColor: MaterialStateProperty.all(Colors.transparent),
-        overlayColor: MaterialStateProperty.all(primaryBlue.withOpacity(0.2)),
+        trackOutlineColor: WidgetStateProperty.all(Colors.transparent),
+        overlayColor: WidgetStateProperty.all(primaryBlue.withAlpha(51)),
       ),
       tabBarTheme: TabBarThemeData(
         indicatorSize: TabBarIndicatorSize.tab,
         indicator: BoxDecoration(
-          color: primaryBlue.withOpacity(0.2),
+          color: primaryBlue.withAlpha(51),
           borderRadius: BorderRadius.circular(8.0),
         ),
         labelColor: primaryBlue,
         unselectedLabelColor: darkSecondaryText,
         splashFactory: NoSplash.splashFactory,
-        overlayColor: MaterialStateProperty.all(Colors.transparent),
+        overlayColor: WidgetStateProperty.all(Colors.transparent),
         dividerColor: Colors.transparent,
       ),
-      progressIndicatorTheme: const ProgressIndicatorThemeData(
+      progressIndicatorTheme: ProgressIndicatorThemeData(
         color: primaryBlue,
-        linearTrackColor: Color(0xFF333333),
+        linearTrackColor: const Color(0xFF333333),
         linearMinHeight: 8,
+        circularTrackColor: Colors.grey.shade800,
       ),
       sliderTheme: SliderThemeData(
         activeTrackColor: primaryBlue,
-        inactiveTrackColor: primaryBlue.withOpacity(0.3),
+        inactiveTrackColor: primaryBlue.withAlpha(77),
         thumbColor: primaryBlue,
-        overlayColor: primaryBlue.withOpacity(0.2),
+        overlayColor: primaryBlue.withAlpha(51),
         trackHeight: 6.0,
         thumbShape: const RoundSliderThumbShape(enabledThumbRadius: 8.0),
         trackShape: const RoundedRectSliderTrackShape(),
@@ -370,7 +371,7 @@ class CirrusTheme {
         padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
         textStyle: const TextStyle(color: Colors.white, fontSize: 14),
         decoration: BoxDecoration(
-          color: primaryBlue.withOpacity(0.9),
+          color: primaryBlue.withAlpha(230),
           borderRadius: BorderRadius.circular(8.0),
         ),
       ),
@@ -406,18 +407,18 @@ class CirrusTheme {
         shape: const CircleBorder(),
       ),
       checkboxTheme: CheckboxThemeData(
-        fillColor: MaterialStateProperty.resolveWith<Color>((states) {
-          if (states.contains(MaterialState.selected)) {
+        fillColor: WidgetStateProperty.resolveWith<Color>((states) {
+          if (states.contains(WidgetState.selected)) {
             return primaryBlue;
           }
           return Colors.transparent;
         }),
-        checkColor: MaterialStateProperty.all(Colors.white),
+        checkColor: WidgetStateProperty.all(Colors.white),
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(4)),
       ),
       radioTheme: RadioThemeData(
-        fillColor: MaterialStateProperty.resolveWith<Color>((states) {
-          if (states.contains(MaterialState.selected)) {
+        fillColor: WidgetStateProperty.resolveWith<Color>((states) {
+          if (states.contains(WidgetState.selected)) {
             return primaryBlue;
           }
           return darkSecondaryText;
@@ -425,8 +426,8 @@ class CirrusTheme {
       ),
       iconButtonTheme: IconButtonThemeData(
         style: ButtonStyle(
-          foregroundColor: MaterialStateProperty.all(primaryBlue),
-          overlayColor: MaterialStateProperty.all(primaryBlue.withOpacity(0.2)),
+          foregroundColor: WidgetStateProperty.all(primaryBlue),
+          overlayColor: WidgetStateProperty.all(primaryBlue.withAlpha(51)),
         ),
       ),
       listTileTheme: ListTileThemeData(

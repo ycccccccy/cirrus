@@ -76,8 +76,8 @@ class _HomePageState extends State<HomePage>
         endIndent: 16);
 
     return Scaffold(
-      appBar: CirrusAppBar(
-        title: const Text('Cirrus 组件展示'),
+      appBar: const CirrusAppBar(
+        title: Text('Cirrus 组件展示'),
 
       ),
       body: ListView(

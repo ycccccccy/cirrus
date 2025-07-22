@@ -21,7 +21,7 @@ class CirrusProgressBar extends StatelessWidget {
     final theme = Theme.of(context).progressIndicatorTheme;
     final height = theme.linearMinHeight ?? 8.0;
     final progressColor = theme.color ?? Theme.of(context).colorScheme.primary;
-    final bgColor = theme.linearTrackColor ?? progressColor.withOpacity(0.2);
+    final bgColor = theme.linearTrackColor ?? progressColor.withAlpha(51);
     
     if (value != null) {
       // 确定进度的线性进度条，使用增强动画
