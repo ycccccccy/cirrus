@@ -15,10 +15,6 @@ class CirrusBadge extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Badge(
-      label: Text(label),
-      isLabelVisible: isVisible,
-      child: child,
-    );
+    return Badge(label: Text(label), isLabelVisible: isVisible, child: child);
   }
 }

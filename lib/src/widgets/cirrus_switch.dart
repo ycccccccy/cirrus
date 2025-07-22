@@ -13,19 +13,12 @@ class CirrusSwitch extends StatelessWidget {
   final ValueChanged<bool>? onChanged;
 
   /// 创建一个 Cirrus 开关组件。
-  const CirrusSwitch({
-    super.key,
-    required this.value,
-    required this.onChanged,
-  });
+  const CirrusSwitch({super.key, required this.value, required this.onChanged});
 
   @override
   Widget build(BuildContext context) {
     // 直接使用 Flutter 的 Switch，
     // 它会自动从 context 的 ThemeData.switchTheme 中获取样式。
-    return Switch(
-      value: value,
-      onChanged: onChanged,
-    );
+    return Switch(value: value, onChanged: onChanged);
   }
 }

@@ -8,19 +8,12 @@ class CirrusAppBar extends StatelessWidget implements PreferredSizeWidget {
   final Widget? title;
   final List<Widget>? actions;
 
-  const CirrusAppBar({
-    super.key,
-    this.title,
-    this.actions,
-  });
+  const CirrusAppBar({super.key, this.title, this.actions});
 
   @override
   Widget build(BuildContext context) {
     // AppBar 会自动从 context 的 ThemeData.appBarTheme 中获取样式
-    return AppBar(
-      title: title,
-      actions: actions,
-    );
+    return AppBar(title: title, actions: actions);
   }
 
   @override

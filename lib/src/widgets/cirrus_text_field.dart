@@ -8,20 +8,14 @@ class CirrusTextField extends StatelessWidget {
   final TextEditingController? controller;
   final String? hintText;
 
-  const CirrusTextField({
-    super.key,
-    this.controller,
-    this.hintText,
-  });
+  const CirrusTextField({super.key, this.controller, this.hintText});
 
   @override
   Widget build(BuildContext context) {
     // TextField 会自动从 context 的 ThemeData.inputDecorationTheme 中获取样式
     return TextField(
       controller: controller,
-      decoration: InputDecoration(
-        hintText: hintText,
-      ),
+      decoration: InputDecoration(hintText: hintText),
     );
   }
 }

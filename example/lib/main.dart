@@ -35,7 +35,7 @@ class _MyAppState extends State<MyApp> {
 
 class HomePage extends StatefulWidget {
   final Function(bool) onThemeChanged;
-  
+
   const HomePage({super.key, required this.onThemeChanged});
 
   @override
@@ -78,7 +78,6 @@ class _HomePageState extends State<HomePage>
     return Scaffold(
       appBar: const CirrusAppBar(
         title: Text('Cirrus 组件展示'),
-
       ),
       body: ListView(
         padding: const EdgeInsets.all(16.0),
@@ -258,11 +257,15 @@ class _HomePageState extends State<HomePage>
               itemBuilder: (context) => [
                 PopupMenuItem(
                   value: 'A',
-                  child: Text('选项 A', style: TextStyle(color: Theme.of(context).textTheme.bodyLarge?.color)),
+                  child: Text('选项 A',
+                      style: TextStyle(
+                          color: Theme.of(context).textTheme.bodyLarge?.color)),
                 ),
                 PopupMenuItem(
                   value: 'B',
-                  child: Text('选项 B', style: TextStyle(color: Theme.of(context).textTheme.bodyLarge?.color)),
+                  child: Text('选项 B',
+                      style: TextStyle(
+                          color: Theme.of(context).textTheme.bodyLarge?.color)),
                 ),
               ],
               child: Container(
@@ -270,7 +273,8 @@ class _HomePageState extends State<HomePage>
                   color: Theme.of(context).colorScheme.primary,
                   borderRadius: BorderRadius.circular(8.0),
                 ),
-                padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
                 child: const Row(
                   mainAxisSize: MainAxisSize.min,
                   children: [

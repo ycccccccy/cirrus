@@ -22,7 +22,7 @@ class CirrusProgressBar extends StatelessWidget {
     final height = theme.linearMinHeight ?? 8.0;
     final progressColor = theme.color ?? Theme.of(context).colorScheme.primary;
     final bgColor = theme.linearTrackColor ?? progressColor.withAlpha(51);
-    
+
     if (value != null) {
       // 确定进度的线性进度条，使用增强动画
       return LinearPercentIndicator(
@@ -34,16 +34,16 @@ class CirrusProgressBar extends StatelessWidget {
         animation: showAnimation,
         animationDuration: 1000,
         clipLinearGradient: true,
-        trailing: showPercentage 
-          ? Text(
-              '${(value! * 100).toInt()}%',
-              style: TextStyle(
-                fontWeight: FontWeight.bold,
-                fontSize: 12.0,
-                color: progressColor,
-              ),
-            )
-          : null,
+        trailing: showPercentage
+            ? Text(
+                '${(value! * 100).toInt()}%',
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 12.0,
+                  color: progressColor,
+                ),
+              )
+            : null,
       );
     } else {
       // 不确定进度的线性进度条，使用原生动画

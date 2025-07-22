@@ -8,11 +8,7 @@ class CirrusTooltip extends StatelessWidget {
   final String message;
   final Widget child;
 
-  const CirrusTooltip({
-    super.key,
-    required this.message,
-    required this.child,
-  });
+  const CirrusTooltip({super.key, required this.message, required this.child});
 
   @override
   Widget build(BuildContext context) {

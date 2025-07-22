@@ -7,11 +7,7 @@ void main() {
     // Build our app and trigger a frame.
     await tester.pumpWidget(
       const MaterialApp(
-        home: Scaffold(
-          body: CirrusCard(
-            child: Text('Test'),
-          ),
-        ),
+        home: Scaffold(body: CirrusCard(child: Text('Test'))),
       ),
     );
 
@@ -19,4 +15,3 @@ void main() {
     expect(find.text('Test'), findsOneWidget);
   });
 }
-

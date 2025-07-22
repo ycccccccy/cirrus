@@ -24,14 +24,16 @@ class CirrusButton extends StatelessWidget {
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
     final buttonStyle = theme.elevatedButtonTheme.style?.copyWith(
-      backgroundColor: WidgetStateProperty.resolveWith<Color?>(
-        (Set<WidgetState> states) {
-          if (backgroundColor != null) {
-            return backgroundColor;
-          }
-          return theme.elevatedButtonTheme.style?.backgroundColor?.resolve(states);
-        },
-      ),
+      backgroundColor: WidgetStateProperty.resolveWith<Color?>((
+        Set<WidgetState> states,
+      ) {
+        if (backgroundColor != null) {
+          return backgroundColor;
+        }
+        return theme.elevatedButtonTheme.style?.backgroundColor?.resolve(
+          states,
+        );
+      }),
     );
 
     return ElevatedButton(

@@ -41,9 +41,9 @@ class CirrusDatePicker extends StatelessWidget {
           suffixIcon: const Icon(Icons.calendar_today),
         ),
         child: Text(
-          initialDate != null 
-            ? '${initialDate!.year}-${initialDate!.month.toString().padLeft(2, '0')}-${initialDate!.day.toString().padLeft(2, '0')}'
-            : '请选择日期',
+          initialDate != null
+              ? '${initialDate!.year}-${initialDate!.month.toString().padLeft(2, '0')}-${initialDate!.day.toString().padLeft(2, '0')}'
+              : '请选择日期',
         ),
       ),
     );

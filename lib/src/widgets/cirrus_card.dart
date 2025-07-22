@@ -13,12 +13,7 @@ class CirrusCard extends StatelessWidget {
   final Color? color;
 
   /// 创建一个具有现代化设计风格的卡片。
-  const CirrusCard({
-    super.key,
-    required this.child,
-    this.padding,
-    this.color,
-  });
+  const CirrusCard({super.key, required this.child, this.padding, this.color});
 
   @override
   Widget build(BuildContext context) {

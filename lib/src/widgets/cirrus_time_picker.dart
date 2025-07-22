@@ -35,9 +35,9 @@ class CirrusTimePicker extends StatelessWidget {
           suffixIcon: const Icon(Icons.access_time),
         ),
         child: Text(
-          initialTime != null 
-            ? '${initialTime!.hour.toString().padLeft(2, '0')}:${initialTime!.minute.toString().padLeft(2, '0')}'
-            : '请选择时间',
+          initialTime != null
+              ? '${initialTime!.hour.toString().padLeft(2, '0')}:${initialTime!.minute.toString().padLeft(2, '0')}'
+              : '请选择时间',
         ),
       ),
     );

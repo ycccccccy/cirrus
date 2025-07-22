@@ -60,7 +60,11 @@ class CirrusTheme {
         foregroundColor: primaryText,
         elevation: 0,
         scrolledUnderElevation: 0,
-        titleTextStyle: TextStyle(color: primaryText, fontSize: 20, fontWeight: FontWeight.w500),
+        titleTextStyle: TextStyle(
+          color: primaryText,
+          fontSize: 20,
+          fontWeight: FontWeight.w500,
+        ),
       ),
       inputDecorationTheme: InputDecorationTheme(
         filled: true,
@@ -395,7 +399,10 @@ class CirrusTheme {
           fontSize: 18,
           fontWeight: FontWeight.bold,
         ),
-        contentTextStyle: const TextStyle(color: darkSecondaryText, fontSize: 16),
+        contentTextStyle: const TextStyle(
+          color: darkSecondaryText,
+          fontSize: 16,
+        ),
       ),
       floatingActionButtonTheme: FloatingActionButtonThemeData(
         backgroundColor: primaryBlue,

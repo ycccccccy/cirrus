@@ -8,11 +8,7 @@ class CirrusTabBar extends StatelessWidget {
   final TabController controller;
   final List<Widget> tabs;
 
-  const CirrusTabBar({
-    super.key,
-    required this.controller,
-    required this.tabs,
-  });
+  const CirrusTabBar({super.key, required this.controller, required this.tabs});
 
   @override
   Widget build(BuildContext context) {

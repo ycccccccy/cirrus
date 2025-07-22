@@ -21,7 +21,7 @@ class CirrusCircularProgressBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final progressColor = color ?? Theme.of(context).colorScheme.primary;
-    
+
     if (value != null) {
       // 确定进度的圆形进度条，使用增强动画
       return CircularPercentIndicator(

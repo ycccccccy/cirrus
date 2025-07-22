@@ -9,12 +9,7 @@ class CirrusDialog extends StatelessWidget {
   final Widget? content;
   final List<Widget>? actions;
 
-  const CirrusDialog({
-    super.key,
-    this.title,
-    this.content,
-    this.actions,
-  });
+  const CirrusDialog({super.key, this.title, this.content, this.actions});
 
   @override
   Widget build(BuildContext context) {

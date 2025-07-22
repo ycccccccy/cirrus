@@ -26,7 +26,7 @@ class CirrusCheckbox extends StatelessWidget {
         // 包含了内置的勾选动画效果
       );
     }
-    
+
     return Checkbox(
       value: value,
       onChanged: onChanged,

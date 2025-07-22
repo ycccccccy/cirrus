@@ -29,7 +29,7 @@ class CirrusRadio<T> extends StatelessWidget {
         // 包含了内置的选中动画效果
       );
     }
-    
+
     return Radio<T>(
       value: value,
       groupValue: groupValue,
